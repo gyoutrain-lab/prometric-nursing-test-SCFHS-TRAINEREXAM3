@@ -66,6 +66,22 @@
     <label><input type="radio" name="q2" value="C"> C. “This sounds more professional.”</label>
     <label><input type="radio" name="q2" value="D"> D. “ABC is violated here.”</label>
   </div>
+<!-- QUESTION 3 -->
+<div class="question hidden" id="q3">
+  <p><strong>Question 3</strong><br>
+  Patient suddenly becomes cyanotic with SpO₂ 82%. What should the trainer identify as the priority action?</p>
+
+  <div class="options">
+    <label><input type="radio" name="q3" value="A"> A. Document oxygen saturation</label>
+    <label><input type="radio" name="q3" value="B"> B. Notify physician immediately</label>
+    <label><input type="radio" name="q3" value="C"> C. Apply oxygen and assess airway</label>
+    <label><input type="radio" name="q3" value="D"> D. Reassure patient and reassess</label>
+  </div>
+
+  <button class="btn" onclick="checkQ3()">Submit Answer</button>
+
+  <div id="q3-feedback" class="feedback hidden"></div>
+</div>
 
   <button class="btn" onclick="checkQ2()">Submit Answer</button>
 
@@ -99,6 +115,40 @@ function checkQ1() {
 }
 
 function checkQ2() {
+  function checkQ3() {
+  const choice = document.querySelector('input[name="q3"]:checked');
+  const fb = document.getElementById('q3-feedback');
+  if (!choice) return;
+
+  fb.classList.remove('hidden');
+
+  if (choice.value === 'C') {
+    fb.className = 'feedback correct';
+    fb.innerHTML =
+      '<strong>Correct.</strong><br>' +
+      'ABC priority: hypoxia requires immediate oxygen and airway assessment. This is within nurse scope and time-critical.';
+    // document.getElementById('q4').classList.remove('hidden');
+  }
+  else if (choice.value === 'A') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML =
+      '<strong>Incorrect.</strong><br>' +
+      'Documentation delay: recording data before correcting hypoxia violates safety priority.';
+  }
+  else if (choice.value === 'B') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML =
+      '<strong>Incorrect.</strong><br>' +
+      'Order-dependence error: nurses must initiate oxygen for hypoxia without waiting.';
+  }
+  else if (choice.value === 'D') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML =
+      '<strong>Incorrect.</strong><br>' +
+      'False reassurance: verbal calming does not correct oxygen deprivation.';
+  }
+}
+
   const choice = document.querySelector('input[name="q2"]:checked');
   const fb = document.getElementById('q2-feedback');
   if (!choice) return;
