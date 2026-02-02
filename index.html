@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <title>Trainer Certification Exam – SCFHS Prometric</title>
   <style>
-    body { font-family: Arial, sans-serif; background:#f7f7f7; padding:20px; }
-    .container { max-width:900px; margin:auto; background:#fff; padding:25px; border-radius:10px; }
-    h1, h2 { color:#333; }
-    .question { margin-bottom:25px; padding:15px; border-left:4px solid #444; background:#fafafa; }
-    .options label { display:block; margin:6px 0; cursor:pointer; }
-    .submit { padding:12px 20px; font-size:16px; background:#222; color:#fff; border:none; border-radius:6px; cursor:pointer; }
-    .submit:hover { background:#000; }
-    .result { margin-top:20px; font-size:18px; font-weight:bold; }
+    body { font-family: Arial, sans-serif; background:#f4f6f8; padding:20px; }
+    .container { max-width:900px; margin:auto; background:#ffffff; padding:25px; border-radius:10px; }
+    h1, h2 { color:#222; }
+    .question { margin-top:25px; padding:20px; border:1px solid #ddd; border-radius:8px; }
+    .options label { display:block; margin:8px 0; cursor:pointer; }
+    .btn { margin-top:15px; padding:10px 18px; font-size:15px; background:#222; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+    .btn:hover { background:#000; }
+    .feedback { margin-top:15px; padding:15px; border-radius:6px; }
+    .correct { background:#e7f6ec; border-left:5px solid #2e8b57; }
+    .incorrect { background:#fdecea; border-left:5px solid #c0392b; }
+    .hidden { display:none; }
   </style>
 </head>
 <body>
@@ -19,315 +22,96 @@
 
 <h1>Trainer Certification Exam</h1>
 <p><strong>SCFHS Prometric Conversion Program</strong></p>
-<p>Instruction: Choose the option that reflects <strong>Prometric safety-first behavior</strong>, not nursing theory or grammar logic.</p>
 
-<form id="quiz">
+<p><strong>Candidate Name:</strong></p>
+<input type="text" id="candidateName" placeholder="Enter full name" style="width:100%; padding:8px; font-size:15px;" />
 
-<!-- QUESTION BANK (Sample 30 / scalable to 100) -->
+<hr>
 
-<div class="question">
-  <p>1. Which trainer explanation is STRICTLY forbidden?</p>
-  <div class="options">
-    <label><input type="radio" name="q1" value="0"> This delays immediate patient safety.</label>
-    <label><input type="radio" name="q1" value="0"> ABC priority is violated.</label>
-    <label><input type="radio" name="q1" value="1"> The verb tense suggests urgency.</label>
-    <label><input type="radio" name="q1" value="0"> This exceeds nursing scope.</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>2. SpO₂ drops to 83%. What must the trainer mark as correct?</p>
-  <div class="options">
-    <label><input type="radio" name="q2" value="0"> Document and reassess</label>
-    <label><input type="radio" name="q2" value="0"> Notify physician</label>
-    <label><input type="radio" name="q2" value="1"> Apply oxygen and assess airway</label>
-    <label><input type="radio" name="q2" value="0"> Review previous vitals</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>3. A trainer allows 2-minute discussions per item. This indicates:</p>
-  <div class="options">
-    <label><input type="radio" name="q3" value="0"> Deep understanding</label>
-    <label><input type="radio" name="q3" value="1"> Coaching drift risk</label>
-    <label><input type="radio" name="q3" value="0"> ESL accommodation</label>
-    <label><input type="radio" name="q3" value="0"> NCLEX alignment</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>4. Which learner error is MOST dangerous?</p>
-  <div class="options">
-    <label><input type="radio" name="q4" value="1"> Delay before safety action</label>
-    <label><input type="radio" name="q4" value="0"> Wrong medication dose</label>
-    <label><input type="radio" name="q4" value="0"> Incorrect terminology</label>
-    <label><input type="radio" name="q4" value="0"> Spelling error</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>5. High pass rate + long response time means:</p>
-  <div class="options">
-    <label><input type="radio" name="q5" value="1"> Trainer drift / inflation risk</label>
-    <label><input type="radio" name="q5" value="0"> Excellent cohort</label>
-    <label><input type="radio" name="q5" value="0"> Strong English skills</label>
-    <label><input type="radio" name="q5" value="0"> Advanced clinical reasoning</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>6. Which phrase should a trainer STOP immediately?</p>
-  <div class="options">
-    <label><input type="radio" name="q6" value="1"> “In my hospital, we usually…”</label>
-    <label><input type="radio" name="q6" value="0"> “Immediate safety first”</label>
-    <label><input type="radio" name="q6" value="0"> “Nurse action allowed”</label>
-    <label><input type="radio" name="q6" value="0"> “This is unsafe”</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>7. ESL trap answers usually look:</p>
-  <div class="options">
-    <label><input type="radio" name="q7" value="1"> Grammatically impressive</label>
-    <label><input type="radio" name="q7" value="0"> Simple and direct</label>
-    <label><input type="radio" name="q7" value="0"> Action-oriented</label>
-    <label><input type="radio" name="q7" value="0"> Conservative</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>8. Correct remediation for repeated delay errors:</p>
-  <div class="options">
-    <label><input type="radio" name="q8" value="1"> Timed safety drills</label>
-    <label><input type="radio" name="q8" value="0"> Grammar review</label>
-    <label><input type="radio" name="q8" value="0"> Extra lectures</label>
-    <label><input type="radio" name="q8" value="0"> Case study essays</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>9. Which action should NEVER be praised?</p>
-  <div class="options">
-    <label><input type="radio" name="q9" value="1"> Clever elimination using wording</label>
-    <label><input type="radio" name="q9" value="0"> Fast ABC recognition</label>
-    <label><input type="radio" name="q9" value="0"> Conservative safety choice</label>
-    <label><input type="radio" name="q9" value="0"> Scope-correct action</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>10. Final authority to release a cohort lies with:</p>
-  <div class="options">
-    <label><input type="radio" name="q10" value="0"> Lead trainer</label>
-    <label><input type="radio" name="q10" value="0"> Student vote</label>
-    <label><input type="radio" name="q10" value="1"> Dashboard release rules</label>
-    <label><input type="radio" name="q10" value="0"> Pass rate</label>
-  </div>
-</div>
-
-<button type="button" class="submit" onclick="gradeQuiz()">Submit Exam</button>
-
-
-<!-- QUESTIONS 11–20 -->
-
-<div class="question">
-  <p>11. Which action signals trainer coaching drift?</p>
-  <div class="options">
-    <label><input type="radio" name="q11" value="1"> Explaining why an option "sounds correct"</label>
-    <label><input type="radio" name="q11" value="0"> Stopping learners at 5 seconds</label>
-    <label><input type="radio" name="q11" value="0"> Using unsafe labels</label>
-    <label><input type="radio" name="q11" value="0"> Enforcing binary choice</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>12. A learner asks for word meaning clarification during drill. Trainer should:</p>
-  <div class="options">
-    <label><input type="radio" name="q12" value="1"> Redirect to action and continue drill</label>
-    <label><input type="radio" name="q12" value="0"> Explain vocabulary</label>
-    <label><input type="radio" name="q12" value="0"> Pause session</label>
-    <label><input type="radio" name="q12" value="0"> Allow discussion</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>13. Which metric is MOST reliable for readiness?</p>
-  <div class="options">
-    <label><input type="radio" name="q13" value="1"> Zero critical unsafe errors</label>
-    <label><input type="radio" name="q13" value="0"> High average score</label>
-    <label><input type="radio" name="q13" value="0"> English fluency</label>
-    <label><input type="radio" name="q13" value="0"> Confidence level</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>14. A trainer allows "reassess later" as acceptable first step. Error type?</p>
-  <div class="options">
-    <label><input type="radio" name="q14" value="1"> Delay error</label>
-    <label><input type="radio" name="q14" value="0"> Scope error</label>
-    <label><input type="radio" name="q14" value="0"> ESL error</label>
-    <label><input type="radio" name="q14" value="0"> Complexity error</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>15. Which explanation is acceptable?</p>
-  <div class="options">
-    <label><input type="radio" name="q15" value="1"> This waits when action is allowed</label>
-    <label><input type="radio" name="q15" value="0"> This is grammatically stronger</label>
-    <label><input type="radio" name="q15" value="0"> This shows deeper thinking</label>
-    <label><input type="radio" name="q15" value="0"> This is what hospitals do</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>16. Response time suddenly increases while scores rise. Correct interpretation?</p>
-  <div class="options">
-    <label><input type="radio" name="q16" value="1"> Inflation risk detected</label>
-    <label><input type="radio" name="q16" value="0"> Learners improving</label>
-    <label><input type="radio" name="q16" value="0"> ESL mastery</label>
-    <label><input type="radio" name="q16" value="0"> Advanced reasoning</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>17. Which learner behavior requires immediate stop?</p>
-  <div class="options">
-    <label><input type="radio" name="q17" value="1"> Justifying answer with sentence structure</label>
-    <label><input type="radio" name="q17" value="0"> Fast incorrect answer</label>
-    <label><input type="radio" name="q17" value="0"> Asking to repeat question</label>
-    <label><input type="radio" name="q17" value="0"> Silent hesitation</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>18. Which remediation matches repeated scope errors?</p>
-  <div class="options">
-    <label><input type="radio" name="q18" value="1"> Scope-of-practice drills</label>
-    <label><input type="radio" name="q18" value="0"> English worksheets</label>
-    <label><input type="radio" name="q18" value="0"> Extra theory lectures</label>
-    <label><input type="radio" name="q18" value="0"> Case reflections</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>19. What should NEVER influence release decisions?</p>
-  <div class="options">
-    <label><input type="radio" name="q19" value="1"> Trainer confidence</label>
-    <label><input type="radio" name="q19" value="0"> Unsafe rate</label>
-    <label><input type="radio" name="q19" value="0"> Response time</label>
-    <label><input type="radio" name="q19" value="0"> Critical errors</label>
-  </div>
-</div>
-
-<div class="question">
-  <p>20. The trainer's PRIMARY accountability is to:</p>
-  <div class="options">
-    <label><input type="radio" name="q20" value="1"> Exam validity and patient safety</label>
-    <label><input type="radio" name="q20" value="0"> Learner satisfaction</label>
-    <label><input type="radio" name="q20" value="0"> Institutional marketing</label>
-    <label><input type="radio" name="q20" value="0"> Pass rate maximization</label>
-  </div>
-</div>
-
-</form>
-
-<h2>Study Rationale – How to Think (Not Memorize)</h2>
-<p><strong>Use this section for trainer self-study. Do NOT share with learners.</strong></p>
+<h2>Instructions</h2>
 <ul>
-  <li><strong>Delay Errors:</strong> Any option that waits, reassesses, documents, or monitors before safety action is unsafe.</li>
-  <li><strong>Scope Errors:</strong> If a nurse can act without an order, waiting for MD is unsafe.</li>
-  <li><strong>ESL Traps:</strong> Grammatically impressive or complex wording is often wrong.</li>
-  <li><strong>Trainer Drift:</strong> High scores + slow time = coaching, not readiness.</li>
-  <li><strong>Rationale Rule:</strong> One sentence. Action-focused. No language analysis.</li>
-  <li><strong>Release Rule:</strong> Dashboard logic overrides trainer opinion.</li>
+  <li>This is a <strong>trainer-only certification exam</strong>.</li>
+  <li>Choose the answer that reflects <strong>Prometric safety behavior</strong>.</li>
+  <li>After each question, feedback will be shown immediately.</li>
+  <li>Rationales explain <strong>why answers are correct or unsafe</strong>.</li>
 </ul>
 
 <hr>
-<h2>Questions 21–25 (With Answer Key & Rationale)</h2>
-<p><strong>Purpose:</strong> Trainer self-calibration. Shows WHY an option is correct/incorrect using Prometric logic. Not for learner distribution.</p>
 
-<div class="question">
-  <p>21. Patient becomes suddenly hypotensive. Which trainer-approved answer is correct?</p>
-  <ul>
-    <li><strong>A. Document blood pressure trend</strong> — ❌ Incorrect. <em>Delay error: documents instead of acting.</em></li>
-    <li><strong>B. Reassess in 10 minutes</strong> — ❌ Incorrect. <em>Delay + assessment lock.</em></li>
-    <li><strong>C. Elevate legs and assess airway</strong> — ✅ Correct. <em>Immediate safety action within nursing scope.</em></li>
-    <li><strong>D. Call physician immediately</strong> — ❌ Incorrect. <em>Scope error: action allowed before MD contact.</em></li>
-  </ul>
+<!-- QUESTION 1 -->
+<div class="question" id="q1">
+  <p><strong>Question 1</strong><br>
+  Patient becomes suddenly hypotensive. Which trainer-approved answer is correct?</p>
+
+  <div class="options">
+    <label><input type="radio" name="q1" value="A"> A. Document blood pressure trend</label>
+    <label><input type="radio" name="q1" value="B"> B. Reassess in 10 minutes</label>
+    <label><input type="radio" name="q1" value="C"> C. Elevate legs and assess airway</label>
+    <label><input type="radio" name="q1" value="D"> D. Call physician immediately</label>
+  </div>
+
+  <button class="btn" onclick="checkQ1()">Submit Answer</button>
+
+  <div id="q1-feedback" class="feedback hidden"></div>
 </div>
 
-<div class="question">
-  <p>22. Which trainer statement MUST be corrected?</p>
-  <ul>
-    <li><strong>A. “This option delays care.”</strong> — ✅ Correct. <em>Valid Prometric rationale.</em></li>
-    <li><strong>B. “This exceeds nurse scope.”</strong> — ✅ Correct. <em>Valid safety-based elimination.</em></li>
-    <li><strong>C. “This sounds more professional.”</strong> — ❌ Incorrect. <em>ESL misguidance; grammar-based reasoning.</em></li>
-    <li><strong>D. “ABC is violated here.”</strong> — ✅ Correct. <em>Accepted Prometric logic.</em></li>
-  </ul>
+<!-- QUESTION 2 -->
+<div class="question hidden" id="q2">
+  <p><strong>Question 2</strong><br>
+  Which trainer statement MUST be corrected?</p>
+
+  <div class="options">
+    <label><input type="radio" name="q2" value="A"> A. “This option delays care.”</label>
+    <label><input type="radio" name="q2" value="B"> B. “This exceeds nurse scope.”</label>
+    <label><input type="radio" name="q2" value="C"> C. “This sounds more professional.”</label>
+    <label><input type="radio" name="q2" value="D"> D. “ABC is violated here.”</label>
+  </div>
+
+  <button class="btn" onclick="checkQ2()">Submit Answer</button>
+
+  <div id="q2-feedback" class="feedback hidden"></div>
 </div>
-
-<div class="question">
-  <p>23. A learner chooses an answer because it is "more detailed." Trainer should label this as:</p>
-  <ul>
-    <li><strong>A. Advanced reasoning</strong> — ❌ Incorrect. <em>Complexity bias.</em></li>
-    <li><strong>B. Safe judgment</strong> — ❌ Incorrect. <em>Detail ≠ safety.</em></li>
-    <li><strong>C. ESL trap behavior</strong> — ✅ Correct. <em>Detail and wording influence decision.</em></li>
-    <li><strong>D. NCLEX logic</strong> — ❌ Incorrect. <em>Misclassification.</em></li>
-  </ul>
-</div>
-
-<div class="question">
-  <p>24. Cohort data shows: Safe rate 88%, response time 8.2 sec. Correct trainer action?</p>
-  <ul>
-    <li><strong>A. Release cohort</strong> — ❌ Incorrect. <em>Timing instability indicates non-automation.</em></li>
-    <li><strong>B. Praise trainer</strong> — ❌ Incorrect. <em>Inflation risk ignored.</em></li>
-    <li><strong>C. Audit trainer rationale style</strong> — ✅ Correct. <em>High score + slow time = drift.</em></li>
-    <li><strong>D. Add more content lectures</strong> — ❌ Incorrect. <em>Does not address behavior.</em></li>
-  </ul>
-</div>
-
-<div class="question">
-  <p>25. Which rule overrides all others?</p>
-  <ul>
-    <li><strong>A. Learner confidence</strong> — ❌ Incorrect. <em>Subjective.</em></li>
-    <li><strong>B. Trainer intuition</strong> — ❌ Incorrect. <em>Bias risk.</em></li>
-    <li><strong>C. Dashboard release criteria</strong> — ✅ Correct. <em>Governance control.</em></li>
-    <li><strong>D. Institutional pressure</strong> — ❌ Incorrect. <em>Invalid influence.</em></li>
-  </ul>
-</div>
-
-
-
-<div id="result" class="result"></div>
 
 </div>
 
 <script>
-function gradeQuiz() {
-  let score = 0;
-  let total = 20;
-  const form = document.getElementById('quiz');
+function checkQ1() {
+  const choice = document.querySelector('input[name="q1"]:checked');
+  const fb = document.getElementById('q1-feedback');
+  if (!choice) return;
 
-  for (let i = 1; i <= total; i++) {
-    const q = form['q' + i];
-    if (q) {
-      for (let opt of q) {
-        if (opt.checked && opt.value === '1') score++;
-      }
-    }
+  fb.classList.remove('hidden');
+
+  if (choice.value === 'C') {
+    fb.className = 'feedback correct';
+    fb.innerHTML = '<strong>Correct.</strong><br>Immediate safety action within nursing scope. Addresses circulation and airway without delay.';
+    document.getElementById('q2').classList.remove('hidden');
+  } else if (choice.value === 'A') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML = '<strong>Incorrect.</strong><br>Delay error: documentation occurs after safety actions, not before.';
+  } else if (choice.value === 'B') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML = '<strong>Incorrect.</strong><br>Assessment lock: waiting when immediate action is required.';
+  } else if (choice.value === 'D') {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML = '<strong>Incorrect.</strong><br>Scope error: nurse can initiate safety actions before contacting physician.';
   }
+}
 
-  const percent = (score / total) * 100;
-  let resultText = `Score: ${score}/${total} (${percent.toFixed(0)}%)`;
+function checkQ2() {
+  const choice = document.querySelector('input[name="q2"]:checked');
+  const fb = document.getElementById('q2-feedback');
+  if (!choice) return;
 
-  if (percent >= 85) {
-    resultText += ' — PASS (Provisional)';
+  fb.classList.remove('hidden');
+
+  if (choice.value === 'C') {
+    fb.className = 'feedback correct';
+    fb.innerHTML = '<strong>Correct.</strong><br>This statement relies on grammar and professionalism instead of safety behavior. This is ESL misguidance.';
   } else {
-    resultText += ' — FAIL (Trainer Not Certified)';
+    fb.className = 'feedback incorrect';
+    fb.innerHTML = '<strong>Incorrect.</strong><br>This statement uses valid Prometric safety-based rationale and does not require correction.';
   }
-
-  document.getElementById('result').innerText = resultText;
 }
 </script>
 
